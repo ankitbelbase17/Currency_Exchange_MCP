@@ -1,5 +1,4 @@
 # Currency_Exchange_MCP
-# Currency Exchange Service
 
 A currency exchange service that provides real-time exchange rates and lists supported currencies.
 
