@@ -1,0 +1,12 @@
+services:
+  currency-exchange:
+    build:
+      context: ./mcpserver
+      dockerfile: Dockerfile
+    ports:
+      - "8004:8004"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - EXCHANGE_RATE_API_KEY=${EXCHANGE_RATE_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    restart: unless-stopped 

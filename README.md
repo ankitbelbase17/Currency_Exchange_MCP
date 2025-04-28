@@ -1,4 +1,4 @@
-# Currency_Exchange_MCP
+# Currency Exchange Service
 
 A currency exchange service that provides real-time exchange rates and lists supported currencies.
 
@@ -14,6 +14,7 @@ A currency exchange service that provides real-time exchange rates and lists sup
 - Python 3.11 or higher
 - Docker (optional, for containerized deployment)
 - Git
+- Exchange Rate API key (get it from https://www.exchangerate-api.com/)
 
 ## Installation
 
@@ -25,7 +26,14 @@ git clone <repository-url>
 cd <repository-name>
 ```
 
-2. Build and start the Docker container:
+2. Create a `.env` file as instructed in `.env.example` in the project root:
+```bash
+# Get your API key from https://www.exchangerate-api.com/
+- `EXCHANGE_RATE_API_KEY`: Your Exchange Rate API key
+- `GROQ_API_KEY`: Your GROQ API key
+```
+
+3. Build and start the Docker container:
 ```bash
 docker compose up -d
 ```
@@ -38,13 +46,19 @@ git clone <repository-url>
 cd <repository-name>
 ```
 
-2. Create and activate a virtual environment:
+2. Create a `.env` file in the project root:
+```bash
+# Get your API key from https://www.exchangerate-api.com/
+EXCHANGE_RATE_API_KEY=your_api_key_here
+```
+
+3. Create and activate a virtual environment:
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
 pip install -r mcpserver/requirements.txt
 ```
@@ -86,3 +100,11 @@ To modify the service:
 docker compose build --no-cache
 docker compose up -d
 ```
+
+## Getting an API Key
+
+1. Visit https://www.exchangerate-api.com/
+2. Sign up for a free account
+3. Get your API key from the dashboard
+4. Add it to your `.env` file as shown in the installation steps
+

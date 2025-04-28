@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+      "currency-exchange": {
+        "command": "uv",
+        "args": [
+          "run",
+          "--with",
+          "mcp[cli]",
+          "mcp",
+          "run",
+          "C:\\Users\\acer\\OneDrive\\Desktop\\new_FE\\server\\curr_exc.py"
+        ]
+      }
+    }
+  }
